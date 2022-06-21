@@ -19,6 +19,8 @@
 		A0426BF7285F5D7C00C0C6DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0426BF6285F5D7C00C0C6DD /* Assets.xcassets */; };
 		A0426BFA285F5D7C00C0C6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0426BF8285F5D7C00C0C6DD /* LaunchScreen.storyboard */; };
 		A0426C02285F63B100C0C6DD /* habitCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0426C01285F63B100C0C6DD /* habitCVC.swift */; };
+		A04989EB286229D8003D0FC4 /* FeelingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04989EA286229D8003D0FC4 /* FeelingsVC.swift */; };
+		A04989EF28622A16003D0FC4 /* feelingsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04989EE28622A16003D0FC4 /* feelingsCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A0426BF9285F5D7C00C0C6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0426BFB285F5D7C00C0C6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0426C01285F63B100C0C6DD /* habitCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCVC.swift; sourceTree = "<group>"; };
+		A04989EA286229D8003D0FC4 /* FeelingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsVC.swift; sourceTree = "<group>"; };
+		A04989EE28622A16003D0FC4 /* feelingsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feelingsCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 				A0426BEF285F5D7A00C0C6DD /* SceneDelegate.swift */,
 				A0426BF1285F5D7A00C0C6DD /* focusTypeVC.swift */,
 				A0426BF3285F5D7A00C0C6DD /* Main.storyboard */,
+				A04989EA286229D8003D0FC4 /* FeelingsVC.swift */,
 				A015B4502860A188000A125B /* MainPageVC.swift */,
+				A04989EE28622A16003D0FC4 /* feelingsCVC.swift */,
 				A015B44E2860A121000A125B /* DaysCVC.swift */,
 				A0426C01285F63B100C0C6DD /* habitCVC.swift */,
 				A0426BF6285F5D7C00C0C6DD /* Assets.xcassets */,
@@ -167,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A015B4512860A188000A125B /* MainPageVC.swift in Sources */,
+				A04989EB286229D8003D0FC4 /* FeelingsVC.swift in Sources */,
 				A015B44F2860A121000A125B /* DaysCVC.swift in Sources */,
+				A04989EF28622A16003D0FC4 /* feelingsCVC.swift in Sources */,
 				A0426BF2285F5D7A00C0C6DD /* focusTypeVC.swift in Sources */,
 				A0426C02285F63B100C0C6DD /* habitCVC.swift in Sources */,
 				A0426BEE285F5D7A00C0C6DD /* AppDelegate.swift in Sources */,

@@ -77,7 +77,7 @@ extension focusTypeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICo
         collectionViewHabit.reloadData()
         
         
-        let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "MainPageVC") as! MainPageVC
+        let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "FeelingsVC") as! FeelingsVC
         
         //eggTimerPage.boilType = type
         //eggTimerPage.boilTime = time

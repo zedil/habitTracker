@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Mentimun.ttf">
+        <array key="Mentimun.otf">
             <string>Mentimun</string>
         </array>
     </customFonts>
@@ -26,7 +26,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What goals you want to focus on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-wg-rqE">
                                 <rect key="frame" x="30" y="168" width="354" height="57.5"/>
                                 <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="purple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hy9-0k-KO6">
@@ -59,7 +59,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ly-Yz-euJ">
                                                     <rect key="frame" x="66.5" y="140" width="60.5" height="24"/>
                                                     <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="purple"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -313,6 +313,73 @@
             </objects>
             <point key="canvasLocation" x="1679.7101449275362" y="65.625"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wa4-E9-dgr">
+            <objects>
+                <viewController id="3aB-Bp-UZn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zni-Gh-cbE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vs-DG-6j0">
+                                <rect key="frame" x="143" y="164" width="128" height="36"/>
+                                <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="30"/>
+                                <color key="textColor" name="purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5kU-he-UqR">
+                                <rect key="frame" x="30" y="290" width="354" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dH2-W8-B7u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWg-j3-J9C">
+                                <rect key="frame" x="30" y="380" width="354" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="w5Z-Is-679"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKd-W3-bfE">
+                                <rect key="frame" x="157.5" y="480" width="99" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Vd3-wE-Wmz"/>
+                                </constraints>
+                                <color key="tintColor" name="purple"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" name="purple"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Mentimun" family="Mentimun" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s1z-lO-Zn7"/>
+                        <color key="backgroundColor" name="pink"/>
+                        <constraints>
+                            <constraint firstItem="5kU-he-UqR" firstAttribute="leading" secondItem="s1z-lO-Zn7" secondAttribute="leading" constant="30" id="BFO-jy-ARk"/>
+                            <constraint firstItem="0vs-DG-6j0" firstAttribute="top" secondItem="s1z-lO-Zn7" secondAttribute="top" constant="120" id="F8x-q9-Y0a"/>
+                            <constraint firstItem="xKd-W3-bfE" firstAttribute="top" secondItem="KWg-j3-J9C" secondAttribute="bottom" constant="40" id="Fj5-tl-1lt"/>
+                            <constraint firstItem="xKd-W3-bfE" firstAttribute="centerX" secondItem="KWg-j3-J9C" secondAttribute="centerX" id="IeU-ee-3Tm"/>
+                            <constraint firstItem="0vs-DG-6j0" firstAttribute="centerX" secondItem="s1z-lO-Zn7" secondAttribute="centerX" id="Yw3-2l-82F"/>
+                            <constraint firstItem="5kU-he-UqR" firstAttribute="top" secondItem="0vs-DG-6j0" secondAttribute="bottom" constant="90" id="hkZ-oF-Pem"/>
+                            <constraint firstItem="KWg-j3-J9C" firstAttribute="top" secondItem="5kU-he-UqR" secondAttribute="bottom" constant="30" id="krA-HT-y8E"/>
+                            <constraint firstItem="KWg-j3-J9C" firstAttribute="leading" secondItem="5kU-he-UqR" secondAttribute="leading" id="sUb-hE-RIB"/>
+                            <constraint firstItem="s1z-lO-Zn7" firstAttribute="trailing" secondItem="5kU-he-UqR" secondAttribute="trailing" constant="30" id="vh7-bg-uWi"/>
+                            <constraint firstItem="5kU-he-UqR" firstAttribute="centerX" secondItem="0vs-DG-6j0" secondAttribute="centerX" id="xL4-FX-Rjd"/>
+                            <constraint firstItem="KWg-j3-J9C" firstAttribute="trailing" secondItem="5kU-he-UqR" secondAttribute="trailing" id="zv8-uZ-hns"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xe-T8-HLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484" y="66"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="VVC-gR-Wk9">
             <objects>
@@ -331,6 +398,94 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
         </scene>
+        <!--FeelingsVC-->
+        <scene sceneID="3NN-np-ddD">
+            <objects>
+                <viewController storyboardIdentifier="FeelingsVC" id="axM-2Z-PMJ" customClass="FeelingsVC" customModule="habitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="se8-Qs-Ju4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRi-Vz-Hqy">
+                                <rect key="frame" x="30" y="144" width="354" height="29"/>
+                                <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="24"/>
+                                <color key="textColor" name="purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4DO-x0-CSL">
+                                <rect key="frame" x="30" y="213" width="354" height="550"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="Sch-1I-aS6"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SdF-IE-fgB">
+                                    <size key="itemSize" width="190" height="178"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="kWo-Cs-qR0" customClass="feelingsCVC" customModule="habitTracker" customModuleProvider="target">
+                                        <rect key="frame" x="82" y="0.0" width="190" height="178"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V3G-zK-Eod">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="178"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-Cq-qjC">
+                                                    <rect key="frame" x="60" y="20" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="Yju-DZ-qzs"/>
+                                                        <constraint firstAttribute="width" constant="70" id="zRS-9L-jLB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysS-Ea-DsM">
+                                                    <rect key="frame" x="63.5" y="105" width="63.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="20"/>
+                                                    <color key="textColor" name="purple"/>
+                                                    <color key="highlightedColor" systemColor="systemIndigoColor"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="3" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="ysS-Ea-DsM" firstAttribute="centerX" secondItem="wCc-Cq-qjC" secondAttribute="centerX" id="JX6-73-6ZI"/>
+                                                <constraint firstItem="ysS-Ea-DsM" firstAttribute="top" secondItem="wCc-Cq-qjC" secondAttribute="bottom" constant="15" id="Z5g-SC-Ol8"/>
+                                                <constraint firstItem="wCc-Cq-qjC" firstAttribute="top" secondItem="V3G-zK-Eod" secondAttribute="top" constant="20" id="uHc-7o-LSA"/>
+                                                <constraint firstItem="wCc-Cq-qjC" firstAttribute="centerX" secondItem="V3G-zK-Eod" secondAttribute="centerX" id="wZ2-kr-EZ2"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="190" height="178"/>
+                                        <connections>
+                                            <outlet property="feelingImgView" destination="wCc-Cq-qjC" id="Nyv-NG-dfo"/>
+                                            <outlet property="feelingLbl" destination="ysS-Ea-DsM" id="dFR-H3-2Dl"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="92q-7e-f8v"/>
+                        <color key="backgroundColor" name="pink"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XRi-Vz-Hqy" secondAttribute="trailing" constant="30" id="Hw3-f6-aUJ"/>
+                            <constraint firstItem="XRi-Vz-Hqy" firstAttribute="centerX" secondItem="92q-7e-f8v" secondAttribute="centerX" id="IE1-Vs-3dH"/>
+                            <constraint firstItem="4DO-x0-CSL" firstAttribute="top" secondItem="XRi-Vz-Hqy" secondAttribute="bottom" constant="40" id="O8e-cY-doS"/>
+                            <constraint firstItem="XRi-Vz-Hqy" firstAttribute="leading" secondItem="se8-Qs-Ju4" secondAttribute="leading" constant="30" id="WQw-yY-QoV"/>
+                            <constraint firstItem="XRi-Vz-Hqy" firstAttribute="top" secondItem="92q-7e-f8v" secondAttribute="top" constant="100" id="aKg-FQ-CgZ"/>
+                            <constraint firstItem="4DO-x0-CSL" firstAttribute="trailing" secondItem="XRi-Vz-Hqy" secondAttribute="trailing" id="oHj-A4-ede"/>
+                            <constraint firstItem="4DO-x0-CSL" firstAttribute="leading" secondItem="XRi-Vz-Hqy" secondAttribute="leading" id="oQb-Gv-VhS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionViewFeelings" destination="4DO-x0-CSL" id="IiA-px-CDZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qpb-KO-53x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3266.666666666667" y="65.625"/>
+        </scene>
     </scenes>
     <resources>
         <image name="sleeping" width="2000" height="2000"/>
@@ -342,6 +497,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
