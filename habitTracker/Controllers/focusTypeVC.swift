@@ -9,19 +9,15 @@ import UIKit
 
 class focusTypeVC: UIViewController {
     
-    struct Habit {
-        var image: UIImage
-        var habitName: String
-        var isSelected: Bool
-    }
+
     
-    var habit : Habit!
-    var allHabit = [Habit]()
+    var habit : HabitViewModel!
+    var allHabit = [HabitViewModel]()
     
-    var allHabits = [Habit(image: UIImage(named: "meditation")!, habitName: "Meditation", isSelected: false),
-                     Habit(image: UIImage(named: "reading")!, habitName: "Reading", isSelected: false),
-                     Habit(image: UIImage(named: "working")!, habitName: "Work", isSelected: false),
-                     Habit(image: UIImage(named: "fitness")!, habitName: "fitness", isSelected: false)
+    var allHabits = [HabitViewModel(image: UIImage(named: "meditation")!, habitName: "Meditation", isSelected: false),
+                     HabitViewModel(image: UIImage(named: "reading")!, habitName: "Reading", isSelected: false),
+                     HabitViewModel(image: UIImage(named: "working")!, habitName: "Work", isSelected: false),
+                     HabitViewModel(image: UIImage(named: "fitness")!, habitName: "fitness", isSelected: false)
     
     ]
     
@@ -76,13 +72,15 @@ extension focusTypeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICo
         
         collectionViewHabit.reloadData()
         
-        
-        let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "FeelingsVC") as! FeelingsVC
-        
-        //eggTimerPage.boilType = type
-        //eggTimerPage.boilTime = time
-                    
-        self.navigationController?.pushViewController(mainPage, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "FeelingsVC") as! FeelingsVC
+            
+            //eggTimerPage.boilType = type
+            //eggTimerPage.boilTime = time
+                        
+            self.navigationController?.pushViewController(mainPage, animated: true)
+        }
+
         
         
     }

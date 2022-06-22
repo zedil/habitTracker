@@ -11,19 +11,15 @@ class MainPageVC: UIViewController {
     
     @IBOutlet weak var btnSetNow: UIButton!
     
-    struct Days {
-        var number:String
-        var name:String
-        var isSelected: Bool
-    }
+
     
-    let allDays = [Days(number: "8", name: "Mo", isSelected: false),
-                   Days(number: "9", name: "Tu", isSelected: false),
-                   Days(number: "10", name: "We", isSelected: false),
-                   Days(number: "11", name: "Th", isSelected: false),
-                   Days(number: "12", name: "Fr", isSelected: false),
-                   Days(number: "13", name: "Sa", isSelected: false),
-                   Days(number: "14", name: "Su", isSelected: false)
+    let allDays = [DayViewModel(number: "8", name: "Mo", isSelected: false),
+                   DayViewModel(number: "9", name: "Tu", isSelected: false),
+                   DayViewModel(number: "10", name: "We", isSelected: false),
+                   DayViewModel(number: "11", name: "Th", isSelected: false),
+                   DayViewModel(number: "12", name: "Fr", isSelected: false),
+                   DayViewModel(number: "13", name: "Sa", isSelected: false),
+                   DayViewModel(number: "14", name: "Su", isSelected: false)
     ]
 
     @IBOutlet weak var collectionViewDays: UICollectionView!

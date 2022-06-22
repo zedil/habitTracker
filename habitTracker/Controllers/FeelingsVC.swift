@@ -10,19 +10,13 @@ import UIKit
 class FeelingsVC: UIViewController {
     
     
-    struct Feelings {
-        var image: UIImage
-        var name: String
-        var isSelected: Bool
-    }
-    
-    let allFeelings = [Feelings(image: UIImage(named: "awful")!, name: "awful", isSelected: false),
-                       Feelings(image: UIImage(named: "bad")!, name: "bad", isSelected: false),
-                       Feelings(image: UIImage(named: "happy")!, name: "happy", isSelected: false),
-                       Feelings(image: UIImage(named:"okay")!, name: "okay", isSelected: false),
-                       Feelings(image: UIImage(named: "sad")!, name: "sad", isSelected: false),
-                       Feelings(image: UIImage(named: "sick")!, name: "sick", isSelected: false),
-                       Feelings(image: UIImage(named: "unsure")!, name: "unsure", isSelected: false)
+    var allFeelings = [FeelingsViewModel(image: UIImage(named: "awful")!, name: "awful", isSelected: false),
+                       FeelingsViewModel(image: UIImage(named: "bad")!, name: "bad", isSelected: false),
+                       FeelingsViewModel(image: UIImage(named: "happy")!, name: "happy", isSelected: false),
+                       FeelingsViewModel(image: UIImage(named:"okay")!, name: "okay", isSelected: false),
+                       FeelingsViewModel(image: UIImage(named: "sad")!, name: "sad", isSelected: false),
+                       FeelingsViewModel(image: UIImage(named: "sick")!, name: "sick", isSelected: false),
+                       FeelingsViewModel(image: UIImage(named: "unsure")!, name: "unsure", isSelected: false)
     ]
     
 
@@ -37,15 +31,6 @@ class FeelingsVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -71,6 +56,15 @@ extension FeelingsVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         cell.feelingLbl.text = allFeelings[indexPath.row].name
         
+        let cellBorder: UIColor = (allFeelings[indexPath.row].isSelected == true) ? .white : UIColor(named: "purple")!
+        let cellLblcolor: UIColor = (allFeelings[indexPath.row].isSelected == true) ? .white : UIColor(named: "purple")!
+        
+        
+        cell.feelingImgView.layer.borderColor = cellBorder.cgColor
+        cell.feelingLbl.textColor = cellLblcolor
+        
+
+        
         
         return cell
     }
@@ -95,8 +89,24 @@ extension FeelingsVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
             return CGSize(width: 130, height: 130)
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
         
+        allFeelings[indexPath.row].isSelected = true
         
+        collectionViewFeelings.reloadData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            
+            let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "DailyTasksVC") as! DailyTasksVC
+            
+            //eggTimerPage.boilType = type
+            //eggTimerPage.boilTime = time
+                        
+            self.navigationController?.pushViewController(mainPage, animated: true)
+        }
         
     }
     

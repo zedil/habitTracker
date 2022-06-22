@@ -486,9 +486,90 @@
             </objects>
             <point key="canvasLocation" x="3266.666666666667" y="65.625"/>
         </scene>
+        <!--Daily TasksVC-->
+        <scene sceneID="WqA-52-iup">
+            <objects>
+                <viewController storyboardIdentifier="DailyTasksVC" id="UsB-f2-wW8" customClass="DailyTasksVC" customModule="habitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QAl-Cr-JSw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Tasks,                                        you can select your daily task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hk-lh-8jQ">
+                                <rect key="frame" x="30" y="104" width="354" height="71.5"/>
+                                <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fiA-nH-TOe">
+                                <rect key="frame" x="30" y="215.5" width="354" height="616.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="104" id="2MD-vG-d8g" customClass="TasksTBC" customModule="habitTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="354" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2MD-vG-d8g" id="Iz4-Zl-qK7">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taskicon" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-7n-YkA">
+                                                    <rect key="frame" x="15" y="37" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Ph1-EH-wsW"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Vkz-3b-1ky"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHT-O2-XGU">
+                                                    <rect key="frame" x="55" y="45" width="269" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="YHT-O2-XGU" firstAttribute="leading" secondItem="xTs-7n-YkA" secondAttribute="trailing" constant="10" id="7YZ-Eb-7qz"/>
+                                                <constraint firstItem="xTs-7n-YkA" firstAttribute="leading" secondItem="Iz4-Zl-qK7" secondAttribute="leading" constant="15" id="CaT-EG-n58"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YHT-O2-XGU" secondAttribute="trailing" constant="10" id="KB4-F7-5aw"/>
+                                                <constraint firstItem="xTs-7n-YkA" firstAttribute="centerY" secondItem="Iz4-Zl-qK7" secondAttribute="centerY" id="OXd-uQ-aI5"/>
+                                                <constraint firstItem="YHT-O2-XGU" firstAttribute="centerY" secondItem="xTs-7n-YkA" secondAttribute="centerY" id="wsn-Xg-05y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="contentView" destination="Iz4-Zl-qK7" id="Hnc-N3-gLy"/>
+                                            <outlet property="taskImgView" destination="xTs-7n-YkA" id="14d-YW-sG6"/>
+                                            <outlet property="taskLbl" destination="YHT-O2-XGU" id="hPr-2G-gSr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w8K-1l-rvs"/>
+                        <color key="backgroundColor" name="pink"/>
+                        <constraints>
+                            <constraint firstItem="fiA-nH-TOe" firstAttribute="centerX" secondItem="w8K-1l-rvs" secondAttribute="centerX" id="2y6-dh-ggr"/>
+                            <constraint firstItem="fiA-nH-TOe" firstAttribute="top" secondItem="0Hk-lh-8jQ" secondAttribute="bottom" constant="40" id="I2Z-1B-ebJ"/>
+                            <constraint firstItem="0Hk-lh-8jQ" firstAttribute="leading" secondItem="QAl-Cr-JSw" secondAttribute="leading" constant="30" id="PeE-lc-bDs"/>
+                            <constraint firstItem="0Hk-lh-8jQ" firstAttribute="centerX" secondItem="w8K-1l-rvs" secondAttribute="centerX" id="Rv4-Yj-bdN"/>
+                            <constraint firstItem="fiA-nH-TOe" firstAttribute="trailing" secondItem="0Hk-lh-8jQ" secondAttribute="trailing" id="SbN-V6-RfS"/>
+                            <constraint firstItem="0Hk-lh-8jQ" firstAttribute="top" secondItem="w8K-1l-rvs" secondAttribute="top" constant="60" id="YsA-kf-8sS"/>
+                            <constraint firstItem="w8K-1l-rvs" firstAttribute="trailing" secondItem="0Hk-lh-8jQ" secondAttribute="trailing" constant="30" id="e6f-1M-4bq"/>
+                            <constraint firstItem="fiA-nH-TOe" firstAttribute="leading" secondItem="0Hk-lh-8jQ" secondAttribute="leading" id="lb3-af-EIn"/>
+                            <constraint firstItem="w8K-1l-rvs" firstAttribute="bottom" secondItem="fiA-nH-TOe" secondAttribute="bottom" constant="30" id="stK-P9-wuX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewTasks" destination="fiA-nH-TOe" id="eJu-NP-y7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3U-ki-H9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4140.579710144928" y="65.625"/>
+        </scene>
     </scenes>
     <resources>
         <image name="sleeping" width="2000" height="2000"/>
+        <image name="taskicon" width="512" height="512"/>
         <namedColor name="pink">
             <color red="1" green="0.80000000000000004" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
