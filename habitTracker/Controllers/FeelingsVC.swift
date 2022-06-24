@@ -9,6 +9,11 @@ import UIKit
 
 class FeelingsVC: UIViewController {
     
+    @IBOutlet weak var btnContinue: UIButton!
+    
+    
+    var flag = false
+    var focusTypeList = [HabitViewModel]()
     
     var allFeelings = [FeelingsViewModel(image: UIImage(named: "awful")!, name: "awful", isSelected: false),
                        FeelingsViewModel(image: UIImage(named: "bad")!, name: "bad", isSelected: false),
@@ -24,13 +29,20 @@ class FeelingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btnContinue.isEnabled = false
         collectionViewFeelings.dataSource = self
         collectionViewFeelings.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func btnContinueAct(_ sender: UIButton) {
+        
+        
+        
+    }
+    
 
 }
 
@@ -57,12 +69,27 @@ extension FeelingsVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
         cell.feelingLbl.text = allFeelings[indexPath.row].name
         
         let cellBorder: UIColor = (allFeelings[indexPath.row].isSelected == true) ? .white : UIColor(named: "purple")!
-        let cellLblcolor: UIColor = (allFeelings[indexPath.row].isSelected == true) ? .white : UIColor(named: "purple")!
+        let cellLblcolor: UIColor = (allFeelings[indexPath.row].isSelected == true) ? UIColor(named: "purple")! : UIColor(named: "purple")!
         
         
         cell.feelingImgView.layer.borderColor = cellBorder.cgColor
         cell.feelingLbl.textColor = cellLblcolor
         
+        
+        if allFeelings[indexPath.row].isSelected {
+            btnContinue.isEnabled = true
+            btnContinue.layer.borderWidth = 3
+            btnContinue.layer.borderColor = UIColor.white.cgColor
+            btnContinue.tintColor = .white
+            btnContinue.backgroundColor = UIColor(named: "purple")!
+            
+        } else {
+            btnContinue.isEnabled = false
+            btnContinue.layer.borderWidth = 3
+            btnContinue.layer.borderColor = UIColor(named: "purple")!.cgColor
+            btnContinue.tintColor = UIColor(named: "purple")!
+            btnContinue.backgroundColor = UIColor.white
+        }
 
         
         
@@ -94,19 +121,26 @@ extension FeelingsVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        allFeelings[indexPath.row].isSelected = true
         
-        collectionViewFeelings.reloadData()
+        allFeelings[indexPath.row].isSelected = !allFeelings[indexPath.row].isSelected
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            
-            let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "DailyTasksVC") as! DailyTasksVC
-            
-            //eggTimerPage.boilType = type
-            //eggTimerPage.boilTime = time
-                        
-            self.navigationController?.pushViewController(mainPage, animated: true)
-        }
+        
+        if flag { return }
+        
+        flag = true
+        
+        collectionViewFeelings.reloadItems(at: [indexPath])
+        
+        
+
+        // This will set the flag to TRUE the first time the method is called
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+//
+//            let mainPage = Storyboards.main.instantiateViewController(withIdentifier: "DailyTasksVC") as! DailyTasksVC
+//
+//            self.navigationController?.pushViewController(mainPage, animated: true)
+//        }
         
     }
     

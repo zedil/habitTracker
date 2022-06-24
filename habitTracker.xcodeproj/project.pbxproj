@@ -18,6 +18,7 @@
 		A02C171F28635BBF0078A3B0 /* taskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02C171E28635BBF0078A3B0 /* taskViewModel.swift */; };
 		A02C172128635BCE0078A3B0 /* dayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02C172028635BCE0078A3B0 /* dayViewModel.swift */; };
 		A02C172328635E530078A3B0 /* feelingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02C172228635E530078A3B0 /* feelingsViewModel.swift */; };
+		A02FDA58286611DE0062CB49 /* MainTasksTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FDA57286611DE0062CB49 /* MainTasksTBC.swift */; };
 		A0426BEE285F5D7A00C0C6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0426BED285F5D7A00C0C6DD /* AppDelegate.swift */; };
 		A0426BF0285F5D7A00C0C6DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0426BEF285F5D7A00C0C6DD /* SceneDelegate.swift */; };
 		A0426BF2285F5D7A00C0C6DD /* focusTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0426BF1285F5D7A00C0C6DD /* focusTypeVC.swift */; };
@@ -41,6 +42,7 @@
 		A02C171E28635BBF0078A3B0 /* taskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskViewModel.swift; sourceTree = "<group>"; };
 		A02C172028635BCE0078A3B0 /* dayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dayViewModel.swift; sourceTree = "<group>"; };
 		A02C172228635E530078A3B0 /* feelingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feelingsViewModel.swift; sourceTree = "<group>"; };
+		A02FDA57286611DE0062CB49 /* MainTasksTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTasksTBC.swift; sourceTree = "<group>"; };
 		A0426BEA285F5D7A00C0C6DD /* habitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0426BED285F5D7A00C0C6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0426BEF285F5D7A00C0C6DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				A04989EE28622A16003D0FC4 /* feelingsCVC.swift */,
 				A0426C01285F63B100C0C6DD /* habitCVC.swift */,
 				A02C171428635AE00078A3B0 /* TasksTBC.swift */,
+				A02FDA57286611DE0062CB49 /* MainTasksTBC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A015B4512860A188000A125B /* MainPageVC.swift in Sources */,
+				A02FDA58286611DE0062CB49 /* MainTasksTBC.swift in Sources */,
 				A02C172128635BCE0078A3B0 /* dayViewModel.swift in Sources */,
 				A02C1713286359AC0078A3B0 /* DailyTasksVC.swift in Sources */,
 				A04989EB286229D8003D0FC4 /* FeelingsVC.swift in Sources */,

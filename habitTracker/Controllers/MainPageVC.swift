@@ -10,6 +10,10 @@ import UIKit
 class MainPageVC: UIViewController {
     
     @IBOutlet weak var btnSetNow: UIButton!
+    var dailyTaskList = [TaskViewModel]()
+    
+    
+    @IBOutlet weak var tableViewMainList: UITableView!
     
 
     
@@ -30,7 +34,11 @@ class MainPageVC: UIViewController {
         collectionViewDays.delegate = self
         collectionViewDays.dataSource = self
         
+        tableViewMainList.delegate = self
+        tableViewMainList.dataSource = self
+        
         print("main")
+        print("list: \(dailyTaskList)")
 
         // Do any additional setup after loading the view.
     }
@@ -79,4 +87,29 @@ extension UIImage {
             }
             return image
         }
+}
+
+extension MainPageVC : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dailyTaskList.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainTasksTBC
+        
+        cell.mainTaskLbl.text = dailyTaskList[indexPath.row].task
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    
+    
+}
+
+
+
