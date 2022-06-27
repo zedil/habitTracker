@@ -127,17 +127,11 @@ extension DailyTasksVC: UITableViewDataSource, UITableViewDelegate {
         
         if allTasks[indexPath.row].isSelected {
             btnContinue.isEnabled = true
-            btnContinue.layer.borderWidth = 3
-            btnContinue.layer.borderColor = UIColor.white.cgColor
-            btnContinue.tintColor = .white
-            btnContinue.backgroundColor = UIColor(named: "purple")!
+
         } else {
             if selectedItem <= 0 {
                 btnContinue.isEnabled = false
-                btnContinue.layer.borderWidth = 3
-                btnContinue.layer.borderColor = UIColor(named: "purple")!.cgColor
-                btnContinue.tintColor = UIColor(named: "purple")!
-                btnContinue.backgroundColor = UIColor.white
+
             }
         }
         

@@ -32,6 +32,8 @@ class FeelingsVC: UIViewController {
         btnContinue.isEnabled = false
         collectionViewFeelings.dataSource = self
         collectionViewFeelings.delegate = self
+        
+        collectionViewFeelings.backgroundColor = .white.withAlphaComponent(0.5)
 
         // Do any additional setup after loading the view.
     }
@@ -68,8 +70,8 @@ extension FeelingsVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         cell.feelingLbl.text = allFeelings[indexPath.row].name
         
-        let cellBorder: UIColor = (allFeelings[indexPath.row].isSelected == true) ? .white : UIColor(named: "purple")!
-        let cellLblcolor: UIColor = (allFeelings[indexPath.row].isSelected == true) ? UIColor(named: "purple")! : UIColor(named: "purple")!
+        let cellBorder: UIColor = (allFeelings[indexPath.row].isSelected == true) ? .white : UIColor(named: "yellowish")!
+        let cellLblcolor: UIColor = (allFeelings[indexPath.row].isSelected == true) ? UIColor(named: "yellowish")! : UIColor(named: "yellowish")!
         
         
         cell.feelingImgView.layer.borderColor = cellBorder.cgColor
@@ -78,17 +80,9 @@ extension FeelingsVC : UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         if allFeelings[indexPath.row].isSelected {
             btnContinue.isEnabled = true
-            btnContinue.layer.borderWidth = 3
-            btnContinue.layer.borderColor = UIColor.white.cgColor
-            btnContinue.tintColor = .white
-            btnContinue.backgroundColor = UIColor(named: "purple")!
             
         } else {
             btnContinue.isEnabled = false
-            btnContinue.layer.borderWidth = 3
-            btnContinue.layer.borderColor = UIColor(named: "purple")!.cgColor
-            btnContinue.tintColor = UIColor(named: "purple")!
-            btnContinue.backgroundColor = UIColor.white
         }
 
         

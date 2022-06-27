@@ -17,9 +17,9 @@ class focusTypeVC: UIViewController {
     var types: TaskType = .fitness
     
     var allHabits = [HabitViewModel(image: UIImage(named: "meditation")!, habitName: "Meditation", isSelected: false),
-                     HabitViewModel(image: UIImage(named: "reading")!, habitName: "Reading", isSelected: false),
+                     HabitViewModel(image: UIImage(named: "reading")!, habitName: "Read", isSelected: false),
                      HabitViewModel(image: UIImage(named: "working")!, habitName: "Work", isSelected: false),
-                     HabitViewModel(image: UIImage(named: "fitness")!, habitName: "fitness", isSelected: false)
+                     HabitViewModel(image: UIImage(named: "fitness")!, habitName: "Fitness", isSelected: false)
     
     ]
     
@@ -31,8 +31,7 @@ class focusTypeVC: UIViewController {
         // Do any additional setup after loading the view.
         
         btnContinue.isEnabled = false
-        btnContinue.layer.borderWidth = 3
-        btnContinue.layer.borderColor = UIColor(named: "purple")!.cgColor
+
         
         collectionViewHabit.delegate = self
         collectionViewHabit.dataSource = self
@@ -78,33 +77,24 @@ extension focusTypeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICo
         cell.imgViewHabit.image = allHabits[indexPath.row].image
         cell.lblHabit.text = allHabits[indexPath.row].habitName
         
-        cell.layer.borderWidth = 3
+        cell.layer.borderWidth = 4
         cell.layer.cornerRadius = 20
         
-        let borderColor: UIColor = (allHabits[indexPath.row].isSelected == true) ? UIColor(named: "purple")! : .white
+        let borderColor: UIColor = (allHabits[indexPath.row].isSelected == true) ? UIColor(named: "yellowish")! : .white
         cell.layer.borderColor = borderColor.cgColor
         
         
         if allHabits[indexPath.row].isSelected {
             btnContinue.isEnabled = true
-            btnContinue.layer.borderWidth = 3
-            btnContinue.layer.borderColor = UIColor.white.cgColor
-            btnContinue.tintColor = .white
-            btnContinue.backgroundColor = UIColor(named: "purple")!
+
         } else {
             print("cell: \(selectedCount)")
             if selectedCount == 0 {
                 btnContinue.isEnabled = false
-                btnContinue.layer.borderWidth = 3
-                btnContinue.layer.borderColor = UIColor(named: "purple")!.cgColor
-                btnContinue.tintColor = UIColor(named: "purple")!
-                btnContinue.backgroundColor = UIColor.white
+
             } else {
                 btnContinue.isEnabled = true
-                btnContinue.layer.borderWidth = 3
-                btnContinue.layer.borderColor = UIColor.white.cgColor
-                btnContinue.tintColor = .white
-                btnContinue.backgroundColor = UIColor(named: "purple")!
+
             }
         }
 
@@ -158,7 +148,7 @@ extension focusTypeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICo
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 170, height: 170)
+        return CGSize(width: 170, height: 180)
     }
     
     

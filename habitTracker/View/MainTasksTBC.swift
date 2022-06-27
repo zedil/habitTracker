@@ -13,9 +13,9 @@ class MainTasksTBC: UITableViewCell {
     
     
     override func layoutSubviews() {
-        
-        self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 7, bottom: 10, right: 7))
-        
+//
+//        self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 7, bottom: 10, right: 7))
+//
         contentView.backgroundColor = UIColor(named: "pink")!
         contentView.layer.cornerRadius = 20
         

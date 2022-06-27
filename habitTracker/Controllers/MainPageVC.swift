@@ -13,6 +13,7 @@ class MainPageVC: UIViewController {
     var dailyTaskList = [TaskViewModel]()
     
     
+    @IBOutlet weak var tasksView: UIView!
     @IBOutlet weak var tableViewMainList: UITableView!
     
 
@@ -42,7 +43,11 @@ class MainPageVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        
+        tasksView.roundCorners(corners: [.topLeft, .topRight], radius: 50)
+    }
 
 
 }
@@ -102,13 +107,28 @@ extension MainPageVC : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        print("selected")
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 80
     }
     
     
     
+}
+
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
 }
 
 
