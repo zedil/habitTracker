@@ -49,7 +49,14 @@ class MainPageVC: UIViewController {
         tasksView.roundCorners(corners: [.topLeft, .topRight], radius: 50)
     }
 
-
+    @IBAction func btnSetSleep(_ sender: UIButton) {
+        
+        let sleepPage = Storyboards.main.instantiateViewController(withIdentifier: "SetSleepVC") as! SetSleepVC
+        self.navigationController?.pushViewController(sleepPage, animated: true)
+        
+        
+    }
+    
 }
 
 extension MainPageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

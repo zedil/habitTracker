@@ -28,6 +28,10 @@
 		A0426C02285F63B100C0C6DD /* habitCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0426C01285F63B100C0C6DD /* habitCVC.swift */; };
 		A04989EB286229D8003D0FC4 /* FeelingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04989EA286229D8003D0FC4 /* FeelingsVC.swift */; };
 		A04989EF28622A16003D0FC4 /* feelingsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04989EE28622A16003D0FC4 /* feelingsCVC.swift */; };
+		A078B70C286DAEA60095754E /* SetSleepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078B70B286DAEA60095754E /* SetSleepVC.swift */; };
+		A078B70E286DB25B0095754E /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078B70D286DB25B0095754E /* CircularProgressBarView.swift */; };
+		A078B710286DF0910095754E /* SleepProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078B70F286DF0910095754E /* SleepProgressBar.swift */; };
+		A078B712286F101A0095754E /* Wake&BedTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078B711286F101A0095754E /* Wake&BedTimeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		A0426C01285F63B100C0C6DD /* habitCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCVC.swift; sourceTree = "<group>"; };
 		A04989EA286229D8003D0FC4 /* FeelingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsVC.swift; sourceTree = "<group>"; };
 		A04989EE28622A16003D0FC4 /* feelingsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feelingsCVC.swift; sourceTree = "<group>"; };
+		A078B70B286DAEA60095754E /* SetSleepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSleepVC.swift; sourceTree = "<group>"; };
+		A078B70D286DB25B0095754E /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		A078B70F286DF0910095754E /* SleepProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepProgressBar.swift; sourceTree = "<group>"; };
+		A078B711286F101A0095754E /* Wake&BedTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wake&BedTimeVC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,8 @@
 				A0426BF1285F5D7A00C0C6DD /* focusTypeVC.swift */,
 				A04989EA286229D8003D0FC4 /* FeelingsVC.swift */,
 				A015B4502860A188000A125B /* MainPageVC.swift */,
+				A078B70B286DAEA60095754E /* SetSleepVC.swift */,
+				A078B711286F101A0095754E /* Wake&BedTimeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 				A0426C01285F63B100C0C6DD /* habitCVC.swift */,
 				A02C171428635AE00078A3B0 /* TasksTBC.swift */,
 				A02FDA57286611DE0062CB49 /* MainTasksTBC.swift */,
+				A078B70D286DB25B0095754E /* CircularProgressBarView.swift */,
+				A078B70F286DF0910095754E /* SleepProgressBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,15 +257,19 @@
 				A02FDA58286611DE0062CB49 /* MainTasksTBC.swift in Sources */,
 				A02C172128635BCE0078A3B0 /* dayViewModel.swift in Sources */,
 				A02C1713286359AC0078A3B0 /* DailyTasksVC.swift in Sources */,
+				A078B712286F101A0095754E /* Wake&BedTimeVC.swift in Sources */,
+				A078B70E286DB25B0095754E /* CircularProgressBarView.swift in Sources */,
 				A04989EB286229D8003D0FC4 /* FeelingsVC.swift in Sources */,
 				A015B44F2860A121000A125B /* DaysCVC.swift in Sources */,
 				A04989EF28622A16003D0FC4 /* feelingsCVC.swift in Sources */,
+				A078B710286DF0910095754E /* SleepProgressBar.swift in Sources */,
 				A02C171528635AE00078A3B0 /* TasksTBC.swift in Sources */,
 				A02C171F28635BBF0078A3B0 /* taskViewModel.swift in Sources */,
 				A0426BF2285F5D7A00C0C6DD /* focusTypeVC.swift in Sources */,
 				A0426C02285F63B100C0C6DD /* habitCVC.swift in Sources */,
 				A0426BEE285F5D7A00C0C6DD /* AppDelegate.swift in Sources */,
 				A0426BF0285F5D7A00C0C6DD /* SceneDelegate.swift in Sources */,
+				A078B70C286DAEA60095754E /* SetSleepVC.swift in Sources */,
 				A014E65E2860A7CA00D55B4B /* Storyboards.swift in Sources */,
 				A02C171D28635BAB0078A3B0 /* habitViewModel.swift in Sources */,
 				A02C172328635E530078A3B0 /* feelingsViewModel.swift in Sources */,

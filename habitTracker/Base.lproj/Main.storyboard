@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Mentimun.otf">
+        <array key="Mentimun.ttf">
             <string>Mentimun</string>
         </array>
     </customFonts>
@@ -292,6 +292,9 @@
                                             </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" name="Mentimun" family="Mentimun" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnSetSleep:" destination="OHu-9d-iD5" eventType="touchUpInside" id="i5R-80-mQ0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -438,6 +441,142 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOb-Vl-4Ki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1679.7101449275362" y="65.625"/>
+        </scene>
+        <!--Set SleepVC-->
+        <scene sceneID="wGf-mT-gfW">
+            <objects>
+                <viewController storyboardIdentifier="SetSleepVC" id="4BH-GP-NEo" customClass="SetSleepVC" customModule="habitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aq5-Gp-qGn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9m8-3J-UfR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Night," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egP-Zg-JXW">
+                                <rect key="frame" x="30" y="84" width="170.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-D2-XlT" customClass="SleepProgressBar" customModule="habitTracker" customModuleProvider="target">
+                                <rect key="frame" x="82" y="184" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uyku" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nX-LY-JaE">
+                                        <rect key="frame" x="95.5" y="113" width="59" height="24"/>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCK-LZ-nEp">
+                                        <rect key="frame" x="84.5" y="152" width="81" height="36"/>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1nX-LY-JaE" firstAttribute="centerY" secondItem="9Ol-D2-XlT" secondAttribute="centerY" id="6Gl-Q1-wns"/>
+                                    <constraint firstItem="1nX-LY-JaE" firstAttribute="centerX" secondItem="9Ol-D2-XlT" secondAttribute="centerX" id="8ui-Xe-pSb"/>
+                                    <constraint firstAttribute="height" constant="250" id="9fY-Sw-Sh0"/>
+                                    <constraint firstItem="QCK-LZ-nEp" firstAttribute="top" secondItem="1nX-LY-JaE" secondAttribute="bottom" constant="15" id="Ms7-Gk-fwS"/>
+                                    <constraint firstAttribute="width" constant="250" id="vaH-0Z-zjk"/>
+                                    <constraint firstItem="QCK-LZ-nEp" firstAttribute="centerX" secondItem="9Ol-D2-XlT" secondAttribute="centerX" id="w2p-dX-wZL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dilara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWS-lt-9tw">
+                                <rect key="frame" x="205.5" y="84" width="89" height="30"/>
+                                <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cHc-sv-s8w">
+                                <rect key="frame" x="30" y="554" width="354" height="278"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="u5D-Xk-P8g">
+                                        <rect key="frame" x="0.0" y="44.5" width="354" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u5D-Xk-P8g" id="5S0-qe-LzW">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-hw-bup">
+                                <rect key="frame" x="30" y="494" width="354" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Sleep Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiH-a4-9NW">
+                                        <rect key="frame" x="20" y="21.5" width="162.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umD-J7-ZPX">
+                                        <rect key="frame" x="259" y="10" width="75" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="9F3-7u-hhI"/>
+                                            <constraint firstAttribute="height" constant="40" id="9ne-zh-jwp"/>
+                                        </constraints>
+                                        <color key="tintColor" name="blue"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="gradient-1" imageContentMode="scaleAspectFill">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="Mentimun" family="Mentimun" pointSize="46"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnClockPickerAct:" destination="4BH-GP-NEo" eventType="touchUpInside" id="pzR-z7-m44"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="umD-J7-ZPX" secondAttribute="trailing" constant="20" id="AQb-ca-DGZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="Tfl-fk-3na"/>
+                                    <constraint firstItem="umD-J7-ZPX" firstAttribute="centerY" secondItem="m9F-hw-bup" secondAttribute="centerY" id="UJ4-Wt-avr"/>
+                                    <constraint firstItem="kiH-a4-9NW" firstAttribute="leading" secondItem="m9F-hw-bup" secondAttribute="leading" constant="20" id="UVo-cn-aR7"/>
+                                    <constraint firstItem="kiH-a4-9NW" firstAttribute="centerY" secondItem="umD-J7-ZPX" secondAttribute="centerY" id="elw-Ok-gvW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uw4-gO-hvg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZWS-lt-9tw" firstAttribute="leading" secondItem="egP-Zg-JXW" secondAttribute="trailing" constant="5" id="0RX-dy-P1O"/>
+                            <constraint firstItem="uw4-gO-hvg" firstAttribute="bottom" secondItem="cHc-sv-s8w" secondAttribute="bottom" constant="30" id="79b-7G-dch"/>
+                            <constraint firstItem="m9F-hw-bup" firstAttribute="top" secondItem="9Ol-D2-XlT" secondAttribute="bottom" constant="60" id="AS3-7A-sjl"/>
+                            <constraint firstItem="uw4-gO-hvg" firstAttribute="trailing" secondItem="9m8-3J-UfR" secondAttribute="trailing" id="IeV-pN-LyK"/>
+                            <constraint firstItem="9m8-3J-UfR" firstAttribute="leading" secondItem="uw4-gO-hvg" secondAttribute="leading" id="RUa-2a-w5k"/>
+                            <constraint firstAttribute="bottom" secondItem="9m8-3J-UfR" secondAttribute="bottom" id="TYN-sQ-d5d"/>
+                            <constraint firstItem="m9F-hw-bup" firstAttribute="leading" secondItem="cHc-sv-s8w" secondAttribute="leading" id="Zh4-JY-YNj"/>
+                            <constraint firstItem="cHc-sv-s8w" firstAttribute="top" secondItem="m9F-hw-bup" secondAttribute="bottom" id="aeB-lr-xZK"/>
+                            <constraint firstItem="uw4-gO-hvg" firstAttribute="trailing" secondItem="cHc-sv-s8w" secondAttribute="trailing" constant="30" id="bOA-BJ-qCR"/>
+                            <constraint firstItem="9Ol-D2-XlT" firstAttribute="centerX" secondItem="9m8-3J-UfR" secondAttribute="centerX" id="cl1-i5-tD7"/>
+                            <constraint firstItem="cHc-sv-s8w" firstAttribute="leading" secondItem="uw4-gO-hvg" secondAttribute="leading" constant="30" id="eIE-3h-4Mg"/>
+                            <constraint firstItem="ZWS-lt-9tw" firstAttribute="centerY" secondItem="egP-Zg-JXW" secondAttribute="centerY" id="gWN-Ya-A3f"/>
+                            <constraint firstItem="9Ol-D2-XlT" firstAttribute="top" secondItem="ZWS-lt-9tw" secondAttribute="bottom" constant="70" id="hOP-f2-N0f"/>
+                            <constraint firstItem="m9F-hw-bup" firstAttribute="trailing" secondItem="cHc-sv-s8w" secondAttribute="trailing" id="jCE-9d-Dzd"/>
+                            <constraint firstItem="egP-Zg-JXW" firstAttribute="top" secondItem="uw4-gO-hvg" secondAttribute="top" constant="40" id="lDk-RW-AId"/>
+                            <constraint firstItem="9m8-3J-UfR" firstAttribute="top" secondItem="Aq5-Gp-qGn" secondAttribute="top" id="oZZ-Un-niV"/>
+                            <constraint firstItem="egP-Zg-JXW" firstAttribute="leading" secondItem="uw4-gO-hvg" secondAttribute="leading" constant="30" id="rJm-Nx-9Lu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sleepProgressView" destination="9Ol-D2-XlT" id="Nhp-6u-qaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hb6-5X-1xi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2465.217391304348" y="65.625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wa4-E9-dgr">
@@ -688,6 +827,150 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpb-KO-53x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4071.0144927536235" y="65.625"/>
+        </scene>
+        <!--Wake Bed TimeVC-->
+        <scene sceneID="Ihh-Wa-gKk">
+            <objects>
+                <viewController storyboardIdentifier="Wake_BedTimeVC" id="dhG-sq-nmL" customClass="Wake_BedTimeVC" customModule="habitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqW-NO-AKK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pm0-jN-sP2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-yk-AzD">
+                                <rect key="frame" x="30" y="144" width="354" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wake Up Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6F-XO-JDe">
+                                        <rect key="frame" x="76" y="20" width="202" height="30"/>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="click" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRs-Yj-izj">
+                                        <rect key="frame" x="50" y="65" width="254" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="HIT-ks-Utg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g1-i1-sQJ">
+                                        <rect key="frame" x="102" y="130" width="150" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="sBH-OF-FJy"/>
+                                            <constraint firstAttribute="height" constant="50" id="zyv-85-mYK"/>
+                                        </constraints>
+                                        <color key="tintColor" name="blue"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Confirm" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="gradient-1" imageContentMode="center">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="Mentimun" family="Mentimun" pointSize="19"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnContinueAct:" destination="UsB-f2-wW8" eventType="touchUpInside" id="ceI-dZ-dbO"/>
+                                            <action selector="btnWakeAct:" destination="dhG-sq-nmL" eventType="touchUpInside" id="JP0-FA-dck"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FRs-Yj-izj" firstAttribute="leading" secondItem="NAL-yk-AzD" secondAttribute="leading" constant="50" id="31d-o3-NOC"/>
+                                    <constraint firstAttribute="height" constant="200" id="62C-9G-iiP"/>
+                                    <constraint firstAttribute="bottom" secondItem="9g1-i1-sQJ" secondAttribute="bottom" constant="20" id="6Yi-xe-SOo"/>
+                                    <constraint firstItem="9g1-i1-sQJ" firstAttribute="centerX" secondItem="NAL-yk-AzD" secondAttribute="centerX" id="6rL-UC-JbB"/>
+                                    <constraint firstAttribute="trailing" secondItem="FRs-Yj-izj" secondAttribute="trailing" constant="50" id="CTL-hw-shu"/>
+                                    <constraint firstItem="R6F-XO-JDe" firstAttribute="centerX" secondItem="NAL-yk-AzD" secondAttribute="centerX" id="FZv-tR-eIS"/>
+                                    <constraint firstItem="R6F-XO-JDe" firstAttribute="top" secondItem="NAL-yk-AzD" secondAttribute="top" constant="20" id="RZp-iH-Pr2"/>
+                                    <constraint firstItem="FRs-Yj-izj" firstAttribute="top" secondItem="R6F-XO-JDe" secondAttribute="bottom" constant="15" id="uze-s5-dic"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKb-es-M0L">
+                                <rect key="frame" x="30" y="494" width="354" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BedTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjq-WM-xdE">
+                                        <rect key="frame" x="118" y="20" width="118.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="click" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeU-1X-jvm">
+                                        <rect key="frame" x="50" y="65" width="254" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="uav-1g-anR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mentimun" family="Mentimun" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-nC-8AU">
+                                        <rect key="frame" x="102" y="130" width="150" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="ha1-07-PaX"/>
+                                            <constraint firstAttribute="height" constant="50" id="rCV-Xd-bCm"/>
+                                        </constraints>
+                                        <color key="tintColor" name="blue"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Confirm" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="gradient-1" imageContentMode="center">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="Mentimun" family="Mentimun" pointSize="19"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnContinueAct:" destination="UsB-f2-wW8" eventType="touchUpInside" id="9cS-FF-39n"/>
+                                            <action selector="btnSleepAct:" destination="dhG-sq-nmL" eventType="touchUpInside" id="yNs-CE-X6I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZeU-1X-jvm" firstAttribute="top" secondItem="rjq-WM-xdE" secondAttribute="bottom" constant="15" id="1nM-Rj-7FQ"/>
+                                    <constraint firstItem="RYZ-nC-8AU" firstAttribute="centerX" secondItem="GKb-es-M0L" secondAttribute="centerX" id="3qQ-Es-iSN"/>
+                                    <constraint firstItem="rjq-WM-xdE" firstAttribute="centerX" secondItem="GKb-es-M0L" secondAttribute="centerX" id="9wi-Gz-SuC"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZeU-1X-jvm" secondAttribute="trailing" constant="50" id="BUC-Am-hyC"/>
+                                    <constraint firstAttribute="bottom" secondItem="RYZ-nC-8AU" secondAttribute="bottom" constant="20" id="BfA-5Z-6gk"/>
+                                    <constraint firstAttribute="height" constant="200" id="IWB-J8-cUv"/>
+                                    <constraint firstItem="ZeU-1X-jvm" firstAttribute="leading" secondItem="GKb-es-M0L" secondAttribute="leading" constant="50" id="Ws2-uw-UQJ"/>
+                                    <constraint firstItem="rjq-WM-xdE" firstAttribute="top" secondItem="GKb-es-M0L" secondAttribute="top" constant="20" id="ids-Pn-ddq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M0m-V9-v5H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NAL-yk-AzD" firstAttribute="top" secondItem="M0m-V9-v5H" secondAttribute="top" constant="100" id="FX8-8H-bdt"/>
+                            <constraint firstItem="M0m-V9-v5H" firstAttribute="trailing" secondItem="GKb-es-M0L" secondAttribute="trailing" constant="30" id="MoW-n9-XbN"/>
+                            <constraint firstItem="GKb-es-M0L" firstAttribute="leading" secondItem="M0m-V9-v5H" secondAttribute="leading" constant="30" id="O7H-kC-idg"/>
+                            <constraint firstItem="pm0-jN-sP2" firstAttribute="leading" secondItem="M0m-V9-v5H" secondAttribute="leading" id="U86-LD-43l"/>
+                            <constraint firstAttribute="bottom" secondItem="pm0-jN-sP2" secondAttribute="bottom" id="VtN-RX-wJL"/>
+                            <constraint firstItem="M0m-V9-v5H" firstAttribute="trailing" secondItem="pm0-jN-sP2" secondAttribute="trailing" id="aLF-tR-o9y"/>
+                            <constraint firstItem="NAL-yk-AzD" firstAttribute="leading" secondItem="M0m-V9-v5H" secondAttribute="leading" constant="30" id="av5-tW-t8V"/>
+                            <constraint firstItem="pm0-jN-sP2" firstAttribute="top" secondItem="oqW-NO-AKK" secondAttribute="top" id="hAK-za-IiY"/>
+                            <constraint firstItem="GKb-es-M0L" firstAttribute="top" secondItem="NAL-yk-AzD" secondAttribute="bottom" constant="150" id="opM-U9-18C"/>
+                            <constraint firstItem="M0m-V9-v5H" firstAttribute="trailing" secondItem="NAL-yk-AzD" secondAttribute="trailing" constant="30" id="pAd-zG-TJ7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfSleep" destination="ZeU-1X-jvm" id="5fO-v6-6Qe"/>
+                        <outlet property="tfWakeUp" destination="FRs-Yj-izj" id="Mhs-YB-iXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Voj-J8-JIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4826.0869565217399" y="65.625"/>
         </scene>
         <!--Daily TasksVC-->
         <scene sceneID="WqA-52-iup">
